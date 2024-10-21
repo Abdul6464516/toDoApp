@@ -26,7 +26,7 @@ function todoHandler(event){
 
      let li = document.createElement("li")
      let deleteButton = document.createElement("button");
-     const buttonText = document.createTextNode('Click Me');
+     const buttonText = document.createTextNode('\u00D7');
      deleteButton.appendChild(buttonText)
      console.log(deleteButton)
      

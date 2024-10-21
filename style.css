@@ -2,18 +2,57 @@
     margin: 0;
     padding: 0;
 }
+
+#upper{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(37, 33, 37);
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#lower{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(37, 33, 37);
+    align-items: center;
+    width: 300px;
+    height: auto-content;
+    border-radius: 10px;
+}
 #ul li {
     list-style-type:none;
-    background-color: aqua;
-    width: 300px;
+    background-color: rgba(51, 54, 54,1);
+    padding-left: 5px;
+    padding-right: 6px;
+    border-radius: 4px;
+    width: 225px;
     margin-top: 4px;
     margin-bottom: 6px;
-
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
 }
 #ul li button {
-    margin-left:12px;
+    /* margin-right:10px; */
+    background-color: rgba(51, 54, 54,1) !important;
+    color: white;
+
+    border: none;
+
+
 }
-.spanColor{
-    color: crimson;
-    background-color: azure;
+#ul li:hover,ul li button {
+    background-color: #534545; /* Change this to your desired highlight color */
 }
