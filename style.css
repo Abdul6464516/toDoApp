@@ -1,3 +1,10 @@
 #ul li {
     list-style-type:none;
 }
+#ul li button {
+    margin-left:12px;
+}
+.spanColor{
+    color: crimson;
+    background-color: azure;
+}
