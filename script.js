@@ -1,19 +1,27 @@
 const button = document.querySelector("#btn");
+const input = document.querySelector("#input");
+function changeHandler (){
+   
+   if(input.value.trim().length===0){
+        console.log("true part of the code")
+    button.setAttribute('disabled','true');
+}else {
+    console.log("else part of the code")
 
+    button.removeAttribute('disabled');
+}
+}
+input.addEventListener("input",changeHandler)
+
+
+function deleteLi(event){
+    const li = event.target.parentElement;
+    li.remove();
+}
 
 function todoHandler(event){
     event.preventDefault();
-    const div = document.querySelector("#div");
-    
-    const input = document.querySelector("#input");
     const inputValue = input.value;
-    if(inputValue.trim()===""){
-        const span = document.createElement("span");
-        span.innerText = "Input must not be empty";
-        span.classList.add("spanColor");
-        div.appendChild(span);
-        return 
-    }
     const ul = document.getElementById("ul");
 
      let li = document.createElement("li")
@@ -24,8 +32,12 @@ function todoHandler(event){
      
      li.innerText = inputValue;
      li.appendChild(deleteButton)
-     ul.appendChild(li,deleteButton);
-     console.log(li)
-     input.value = " "
+     ul.appendChild(li);
+     deleteButton.addEventListener("click",deleteLi);
+
+     input.value = "";
+     input.value.trim();
+     button.setAttribute('disabled','true');
 }
+
 button.addEventListener("click",todoHandler)
